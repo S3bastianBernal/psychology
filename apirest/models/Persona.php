@@ -24,6 +24,13 @@ class Persona extends Conectar{
     }
 
     public function insert_persona($id_persona,$nombre,$telefono,$correo, $foto, $documento, $tipo_documento, $tipo_persona){
+        $nombre = $_POST["nombre"];
+        $telefono = $_POST["telefono"];
+        $correo = $_POST["correo"];
+        $foto = null;
+        $documento = $_POST["Documento"];
+        $tipo_documento = $_POST["tipo_Doc"];
+        $tipo_persona = $_POST["tipo_persona"];
         $conectar=parent::Conexion();
         parent::set_name();
         $stm="INSERT INTO Persona(id_persona,nombre,telefono,correo,foto,documento,tipo_documento, tipo_persona) VALUES(?,?,?,?,?,?,?,?)";

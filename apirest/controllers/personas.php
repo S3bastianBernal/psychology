@@ -25,7 +25,7 @@ switch ($_GET["op"]) {
         break;
     case 'insert':
          $datos = $persona->insert_persona($body["id_persona"],$body["nombre"],$body["telefono"],$body["correo"],$body["foto"],$body["documento"], $body["tipo_documento"],$body["tipo_persona"]);
-         echo json_encode("insertado correctamente");
+         header('Location: http://localhost/ArTeM01-054/psychology/psychology/users');
         break;
 }
 
